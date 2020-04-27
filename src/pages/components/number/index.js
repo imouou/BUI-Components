@@ -5,6 +5,7 @@ loader.define(function(require, exports, module) {
             // 获取参数
             var params = bui.history.getParams(module.id)
 
+            // console.log(params, "number")
             this.number = this.numberInit(params);
         },
         numberInit: function(opt) {

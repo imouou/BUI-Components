@@ -1,10 +1,19 @@
+/**
+ * params接收以下参数
+ * params.listtemplate: "templateBuy" || "templateNews" || "templateTodo"
+ * params.type: "cart" || "todo" || "done" 只是用来示例区分列表请求的不同参数
+ * params.url: "" 请求的接口
+ */
 loader.define(function(require, exports, module) {
+
+    // 每次请求回数据则增加1, 用来跟component的索引挂钩, 这样delay可以按一组一组数据编译,而不是每次都从头编译.
+    var results = [];
+    // 获取参数
+    var params = bui.history.getParams(module.id);
 
     var pageview = {
         init: function() {
-            // 获取参数
-            var params = bui.history.getParams(module.id)
-                // console.log(params)
+            // console.log(params)
             this.list = this.listInit(params);
         },
         listInit: function(opt) {
@@ -29,7 +38,22 @@ loader.define(function(require, exports, module) {
                     data: "data"
                 },
                 callback: function(e) {},
-                template: template
+                template: template,
+                onRefresh: function() {
+                    results = [];
+                },
+                onLoad: function(data, result) {
+
+                    // 购物车模板需要编译子组件
+                    if (params.type == "cart") {
+                        // 按一组一组初始化
+                        loader.component({
+                            id: `.delaybuy${results.length}`
+                        })
+                        results.push(results.length);
+                    }
+
+                }
             });
             return uiList;
         },
@@ -58,14 +82,14 @@ loader.define(function(require, exports, module) {
                 var html = "";
                 data.forEach(function(el, index) {
 
-                    html += `<li class="bui-btn bui-box">
+                    html += `<li class="bui-btn bui-box-align-top">
                         <div class="bui-thumbnail"><img src="${el.image}" alt=""></div>
                         <div class="span1">
                             <h3 class="item-title">${el.name}</h3>
                             <p class="item-text">${el.address}</p>
-                            <p class="item-text">${el.distance}公里</p>
+                            <p class="item-text">￥${el.price}</p>
                         </div>
-                        <component class="delaybuy" commodityname="${el.name}" name="pages/components/number/index" delay="true"></component>
+                        <component class="delaybuy${results.length}" name="pages/components/number/index" commodityname="${el.name}"></component>
                     </li>`
                 });
                 return html;
