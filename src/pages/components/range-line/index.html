@@ -1,0 +1,26 @@
+﻿<style>
+    .bui-range-wrap .bui-range {
+        width: 100%;
+    }
+    
+    .bui-range-wrap span {
+        width: .6rem;
+        text-align: center;
+        margin: 0 0 0 .2rem;
+    }
+</style>
+<ul class="bui-list">
+    <li class="bui-btn bui-box clearactive">
+        <label class="bui-label">{{range.label}}</label>
+        <div class="span1">
+        </div>
+        <div style="width:{{range.width}}">
+            <div class="bui-range-wrap bui-box">
+                <div class="span1">
+                    <input type="range" class="bui-range" min="{{range.min}}" max="{{range.max}}" step="{{range.step}}" value="0" b-model="range.value">
+                </div>
+                <span b-show="range.showvalue" b-text="range.value"></span>
+            </div>
+        </div>
+    </li>
+</ul>

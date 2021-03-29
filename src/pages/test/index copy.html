@@ -1,0 +1,40 @@
+﻿<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">表单模板</div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+    </header>
+    <main>
+        <component id="searchbar" name="pages/components/searchbar/index"></component>
+        <div class="section-title">轮播图</div>
+        <component id="slide" name="pages/components/slide/index" data='[{"image":"http://easybui.com/demo/images/banner01.png","url":""},{"image":"http://easybui.com/demo/images/banner02.png","url":""}]'></component>
+        <div class="section-title">单选组样式--默认选中</div>
+        <div class="section-title">输入框</div>
+        <component id="name" name="pages/components/input-line/index" label="姓名" type="text"></component>
+        <div class="section-title">密码框</div>
+        <component id="password" name="pages/components/input-line/index" label="密码" type="password" icon="icon-eye" control="toggle"></component>
+        <div class="section-title">描述</div>
+        <component id="detail" name="pages/components/textarea/index"></component>
+        <div class="section-title">描述</div>
+        <component id="range" name="pages/components/range-line/index" width="3rem"></component>
+        <div class="section-title">单选组样式--默认选中</div>
+        <component id="groupselect" name="pages/components/select/index" type="select" data='[{"name":"单选1","value":"group11"},{"name":"单选2","value":"group12"}]' value="group11"></component>
+        <div class="section-title">单选组</div>
+        <component id="groupradio" name="pages/components/select/index" type="radio" data='[{"name":"单选1","value":"group1"},{"name":"单选2","value":"group2"}]'></component>
+        <div class="section-title">多选组</div>
+        <component id="groupcheckbox" name="pages/components/select/index" type="checkbox" data='[{"name":"多选1","value":"groups1"},{"name":"多选2","value":"groups2"}]'></component>
+        <div class="section-title">弹出选择</div>
+        <component id="groupselectpopup" name="pages/components/selectpopup/index" label="地点" placeholder="请选择地点" title="请选择地点" type="checkbox" data='[{"name":"多选1","value":"groups1"},{"name":"多选2","value":"groups2"}]'></component>
+        <component id="groupselectpopup2" name="pages/components/selectpopup/index" label="地点" placeholder="请选择地点" title="请选择地点" type="checkbox" data='[{"name":"多选1","value":"groups1"},{"name":"多选2","value":"groups2"}]'></component>
+        <div class="section-title">级联列表</div>
+        <component id="levelselect" name="pages/components/levelselect/index"></component>
+        <component id="levelselect2" name="pages/components/levelselect/index" value='["广东","广州市","天河区"]'></component>
+        <div class="section-title">侧滑列表</div>
+        <component id="listview" name="pages/components/listview/index" data='[{"title":"多选1","icon":""},{"title":"多选2","icon":""}]'></component>
+    </main>
+</div>

@@ -1,0 +1,22 @@
+<style>
+    .bui-upload .bui-btn {
+        margin-bottom: .2rem;
+    }
+    .bui-upload-thumbnail {
+        position: relative;
+    }
+    .bui-upload-thumbnail .icon-remove {
+        position: absolute;
+        top: -.1rem;
+        right: -.1rem;
+        z-index: 10;
+        font-size: .48rem;
+    }
+</style>
+<div ref="container" class="bui-upload bui-fluid-space-4" b-template="upload.tplPhoto(upload.data)" b-command="prepend">
+    <div class="span1">
+        <div class="bui-btn" b-click="upload.add">
+            <i class="icon-plus large"></i>
+        </div>
+    </div>
+</div>

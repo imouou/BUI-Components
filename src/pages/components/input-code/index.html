@@ -1,0 +1,12 @@
+﻿<ul class="bui-list">
+    <li class="bui-btn bui-box clearactive">
+        <label class="bui-label">{{input.label}}</label>
+        <div class="span1">
+            <div class="bui-input">
+                <input b-bind="input.type" value="" placeholder="{{input.placeholder}}" b-model="input.value">
+                <i class="{{input.icon}}" b-show="input.value" b-click="input.clickicon({{input.control}})"></i>
+            </div>
+        </div>
+        <div b-class="input.btn.disabled" class="bui-btn primary-reverse mini ring" b-click="input.send" b-text="input.btn.label">发送验证码</div>
+    </li>
+</ul>

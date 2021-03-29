@@ -1,0 +1,43 @@
+<style>
+    .chatbar {
+        padding: .12rem;
+        border-top: 1px solid #eee;
+        background: #f9f9f9;
+    }
+    
+    .chatbar .bui-input i {
+        width: .7rem;
+        height: .46rem;
+        line-height: .46rem;
+        font-size: .46rem;
+    }
+    
+    .chatbar .bui-input .bui-btn {
+        display: inline-block;
+        padding-left: 0;
+        padding-right: 0;
+        width: 1rem;
+        border: 0;
+    }
+    
+    .chatbar .bui-input {
+        background: none;
+    }
+    
+    .chatbar .bui-input textarea,
+    .chatbar .bui-input input {
+        margin: 0 .12rem 0 0;
+        padding: .2rem .2rem 0 .2rem;
+        height: .8rem;
+        -webkit-border-radius: .05rem;
+        background: #fff;
+        border-radius: .05rem;
+        padding-right: .1rem;
+        padding-left: .1rem;
+    }
+</style>
+<div class="chatbar">
+    <div class="bui-input">
+        <textarea b-model="chatbar.message" class="bui-input"></textarea><span b-click="chatbar.send" b-class="chatbar.canSend" class="bui-btn round disabled">发送</span>
+    </div>
+</div>

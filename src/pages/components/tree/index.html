@@ -1,0 +1,45 @@
+<style>
+    .bui-tree .bui-accordion{
+        border-top: 0;
+        border-bottom: 0;
+        padding-left: .2rem;
+    }
+    .bui-tree .bui-accordion dd{
+        padding-left: .3rem;
+    }
+    .bui-tree .bui-accordion dt:last-child{
+        border-bottom: 0;
+    }
+    .bui-tree .bui-accordion dd{
+        border-top: 0;
+    }
+    .bui-tree .bui-accordion dd:last-child{
+        border-bottom: 0;
+    }
+    .bui-tree .bui-btn .icon-nosubmenu ,
+    .bui-tree .bui-btn .icon-accordion {
+        margin-right: .2rem;
+    }
+    .bui-tree .bui-btn > .icon-accordion:before{
+        content:"\e61e"
+    }
+    .bui-tree .active > .icon-accordion:before{
+        content:"\e620"
+    }
+</style>
+<dl class="bui-accordion bui-tree" b-template="tree.tplTrees(tree.trees)">
+    <!-- <dt class="bui-btn bui-box">
+        <div class="span1">折叠菜单</div>
+        <i class="icon-accordion"></i>
+    </dt>
+    <dd>
+        折叠菜单内容
+    </dd>
+    <dt class="bui-btn bui-box">
+        <div class="span1">折叠菜单</div>
+        <i class="icon-accordion"></i>
+    </dt>
+    <dd>
+        折叠菜单内容
+    </dd> -->
+</dl>

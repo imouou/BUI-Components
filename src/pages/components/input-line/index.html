@@ -1,0 +1,11 @@
+﻿<ul class="bui-list">
+    <li class="bui-btn bui-box clearactive">
+        <label class="bui-label">{{input.label}}</label>
+        <div class="span1">
+            <div class="bui-input">
+                <input b-bind="input.type" value="" placeholder="{{input.placeholder}}" b-model="input.value">
+                <i class="{{input.icon}}" b-show="input.value" b-click="input.clickicon({{input.control}})"></i>
+            </div>
+        </div>
+    </li>
+</ul>
